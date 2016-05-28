@@ -9,9 +9,9 @@ cp ../prod/app.tar.gz ../openshift
 echo "Removing created app.tar.gz file"
 rm ../prod/app.tar.gz
 echo "Move to openshift directory"
-cd ~/openshift
+cd ../openshift
 echo "Un-bundle tar file"
-tar -xvf app.tar.gz -s '/^bundle//'
+tar -xvf app.tar.gz --transform 's|^bundle/||' -C ../meteor/
 echo "Removing app.tar.gz file"
 rm app.tar.gz
 echo "Commiting new file"
