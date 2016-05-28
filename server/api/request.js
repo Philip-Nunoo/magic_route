@@ -7,18 +7,27 @@ Api.addRoute('user/request', {authRequired: false}, {
         Requests.insert(doc);
 
         let string = "get me /routes"
+		// let string = "from:sdsdasd to:sds ."
         let resp = processMessage(string)
         // send sms to number
-        
+
         return {success: true};
     }
 });
 
 function processMessage (string) {
 	let routesRegExp = /\/routes/;
- 	if(routesRegExp.test(myText)){
+
+ 	if(routesRegExp.test(string)){
  		return Terminals.find().fetch();
  	}
+ 	let fromToRegExp = /^.*?\bfrom\b.*?\bto\b.*?$/m;
+
+ 	if(fromToRegExp.test(string)){
+ 		return "Destination";
+ 	}
+
+ 	return "Non matched Try again";
 }
 function registerUser (user) {
 	 // body...  

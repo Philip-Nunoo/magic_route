@@ -5,7 +5,7 @@
 echo "meteor bundle"
 meteor build ../bundle.tar.gz
 echo "unzip"
-tar -xvf ../bundle.tar.gz --transform 's|^bundle/||' -C ../meteor/
+tar -xvf ../bundle.tar.gz/app.tar.gz --transform 's|^bundle/||' -C ../meteor/
 
 echo "commit"
 cd ../meteor
