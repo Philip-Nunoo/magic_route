@@ -5,9 +5,9 @@
 echo "Building to prod RUN: 'meteor build prod'"
 meteor build ../prod
 echo "Copying to ..openshift"
-cp ../app.tar.gz ../openshift
+cp ../prod/app.tar.gz ../openshift
 echo "Removing created app.tar.gz file"
-rm ../app.tar.gz
+rm ../prod/app.tar.gz
 echo "Move to openshift directory"
 cd ~/openshift
 echo "Un-bundle tar file"
