@@ -22,3 +22,6 @@ insecure                # Allow all DB writes from clients (for prototyping)
 
 check
 nimble:restivus
+harrison:papa-parse
+themeteorchef:bert
+fortawesome:fontawesome

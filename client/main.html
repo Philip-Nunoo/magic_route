@@ -4,7 +4,7 @@
 
 <body>
   <h1>Welcome to Meteor!</h1>
-
+  {{> upload}}
   {{> hello}}
   {{> info}}
 </body>
@@ -22,4 +22,14 @@
     <li><a href="https://docs.meteor.com">Read the Docs</a></li>
     <li><a href="https://forums.meteor.com">Discussions</a></li>
   </ul>
+</template>
+
+<template name="upload">
+  <h4 class="page-header">Upload a CSV</h4>
+
+  {{#unless uploading}}
+    <input type="file" name="uploadCSV">
+  {{else}}
+    <p><i class="fa fa-spin fa-refresh"></i> Uploading files...</p>
+  {{/unless}}
 </template>
