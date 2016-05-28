@@ -27,5 +27,12 @@ function get (argument) {
  */
 
 function getFare (from_terminal, to_terminal) {
-	let fare = 0;	 
+	check(from_terminal, String);
+	check(to_terminal, String);
+	let query = {
+		from_terminal: from_terminal,
+		to_terminal: to_terminal
+	};
+	let route = Routes.findOne(query)
+	return route? route.fare : '0';	 
 }
