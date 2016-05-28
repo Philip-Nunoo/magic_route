@@ -1,0 +1,44 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/bin/npm', 'run', 'openshift' ]
+2 info using npm@3.5.2
+3 info using node@v0.10.40
+4 verbose node symlink /usr/bin/node
+5 verbose run-script [ 'preopenshift', 'openshift', 'postopenshift' ]
+6 info lifecycle app@~preopenshift: app@
+7 silly lifecycle app@~preopenshift: no script for preopenshift, continuing
+8 info lifecycle app@~openshift: app@
+9 verbose lifecycle app@~openshift: unsafe-perm in lifecycle true
+10 verbose lifecycle app@~openshift: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/home/eit/Documents/summo/magic_route/app/node_modules/.bin:/home/eit/Documents/google-cloud-sdk/bin:/home/eit/.rvm/gems/ruby-2.1.2@MestRails/bin:/home/eit/.rvm/gems/ruby-2.1.2@global/bin:/home/eit/.rvm/rubies/ruby-2.1.2/bin:/usr/share/android-studio/data/sdk/tools:/usr/share/android-studio/data/sdk/platform-tools:/usr/share/android-studio/data/sdk:/home/eit/Documents/android-ndk-r10d:/home/eit/Documents/cocos2d-x-3/templates:/usr/bin:/home/eit/Documents/cocos2d-x-3/tools/cocos2d-console/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/share/android-studio/data/sdk/tools:/usr/share/android-studio/data/sdk/platform-tools:/home/eit/.rvm/bin:/home/eit/.rvm/bin:/home/eit/.rvm/bin:/opt/java/jdk1.7.0_67/bin:/home/eit/.rvm/bin:/home/eit/.rvm/bin:/home/eit/.rvm/bin
+11 verbose lifecycle app@~openshift: CWD: /home/eit/Documents/summo/magic_route/app
+12 silly lifecycle app@~openshift: Args: [ '-c', './push.sh' ]
+13 silly lifecycle app@~openshift: Returned: code: 128  signal: null
+14 info lifecycle app@~openshift: Failed to exec openshift script
+15 verbose stack Error: app@ openshift: `./push.sh`
+15 verbose stack Exit status 128
+15 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:232:16)
+15 verbose stack     at EventEmitter.emit (events.js:98:17)
+15 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+15 verbose stack     at ChildProcess.emit (events.js:98:17)
+15 verbose stack     at maybeClose (child_process.js:766:16)
+15 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:833:5)
+16 verbose pkgid app@
+17 verbose cwd /home/eit/Documents/summo/magic_route/app
+18 error Linux 3.18.1-031801-generic
+19 error argv "node" "/usr/bin/npm" "run" "openshift"
+20 error node v0.10.40
+21 error npm  v3.5.2
+22 error code ELIFECYCLE
+23 error app@ openshift: `./push.sh`
+23 error Exit status 128
+24 error Failed at the app@ openshift script './push.sh'.
+24 error Make sure you have the latest version of node.js and npm installed.
+24 error If you do, this is most likely a problem with the app package,
+24 error not with npm itself.
+24 error Tell the author that this fails on your system:
+24 error     ./push.sh
+24 error You can get information on how to open an issue for this project with:
+24 error     npm bugs app
+24 error Or if that isn't available, you can get their info via:
+24 error     npm owner ls app
+24 error There is likely additional logging output above.
+25 verbose exit [ 1, true ]

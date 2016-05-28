@@ -2,12 +2,12 @@
 # this assumes you created the openshift directory in your home directory
 # modify the script if this is not the case
 
-echo "Building to prod"
-meteor build prod
+echo "Building to prod RUN: 'meteor build prod'"
+meteor build ../prod
 echo "Copying to ..openshift"
-cp prod/app.tar.gz ../openshift
+cp ../app.tar.gz ../openshift
 echo "Removing created app.tar.gz file"
-rm prod/app.tar.gz
+rm ../app.tar.gz
 echo "Move to openshift directory"
 cd ~/openshift
 echo "Un-bundle tar file"
@@ -18,4 +18,4 @@ echo "Commiting new file"
 git add .
 git commit -am "a change"
 echo "Push to openshift"
-git push
+git push origin master
