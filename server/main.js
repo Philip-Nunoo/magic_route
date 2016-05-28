@@ -6,8 +6,7 @@ function populateRoutes (argument) {
 	}
 }
 Meteor.startup(() => {
-  // code to run on server at 
-  populateRoutes()
+	populateRoutes()
 });
 
 
@@ -16,14 +15,16 @@ Meteor.methods({
 		check( data, Array );
 
 		for ( let i = 0; i < data.length; i++ ) {
-			let item   = data[ i ],
-          		exists = Routes.findOne( { from_terminal: item.from_terminal, to_terminal: item.to_terminal } );
+			let item   = data[ i ];
+			let exists = Routes.findOne( { from_terminal: item.from_terminal, to_terminal: item.to_terminal } );
+			let terminalExists = Terminals.findOne( { name: item.from_terminal } );
 
-          	if ( !exists ) {
-          		Routes.insert( item );
-          	} else {
-          		console.warn( 'Rejected. This item already exists.' );
-          	}
-          }
-      }
-  });
+			if ( !terminalExists ){
+				Terminals.insert({name: item.from_terminal});
+			}
+			if ( !exists ) {
+				Routes.insert( item );
+			}
+		}
+	}
+});

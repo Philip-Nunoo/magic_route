@@ -6,11 +6,20 @@ Api.addRoute('user/request', {authRequired: false}, {
         doc = this.bodyParams;
         Requests.insert(doc);
 
+        let string = "get me /routes"
+        let resp = processMessage(string)
+        // send sms to number
         
         return {success: true};
     }
 });
 
+function processMessage (string) {
+	let routesRegExp = /\/routes/;
+ 	if(routesRegExp.test(myText)){
+ 		return Terminals.find().fetch();
+ 	}
+}
 function registerUser (user) {
 	 // body...  
 }
