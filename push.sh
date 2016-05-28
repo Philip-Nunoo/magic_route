@@ -13,7 +13,7 @@ cd ~/openshift
 echo "Un-bundle tar file"
 tar -xvf app.tar.gz -s '/^bundle//'
 echo "Removing app.tar.gz file"
-rm mymeteordemo.tar.gz
+rm app.tar.gz
 echo "Commiting new file"
 git add .
 git commit -am "a change"
